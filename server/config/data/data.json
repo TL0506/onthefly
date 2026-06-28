@@ -1,0 +1,47 @@
+[
+    {
+        "title": "Tokyo Adventure",
+        "description": "Explore the vibrant streets of Tokyo, from neon-lit Shinjuku to the serene temples of Asakusa.",
+        "img_url": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800",
+        "num_days": 10,
+        "start_date": "2024-03-01",
+        "end_date": "2024-03-10",
+        "total_cost": 3500.00
+    },
+    {
+        "title": "Paris Getaway",
+        "description": "A romantic escape through the City of Light — the Eiffel Tower, world-class cuisine, and art museums.",
+        "img_url": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800",
+        "num_days": 7,
+        "start_date": "2024-06-15",
+        "end_date": "2024-06-21",
+        "total_cost": 4200.00
+    },
+    {
+        "title": "Bali Retreat",
+        "description": "Relax and recharge on the Island of the Gods with lush rice terraces, temples, and stunning beaches.",
+        "img_url": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800",
+        "num_days": 14,
+        "start_date": "2024-08-05",
+        "end_date": "2024-08-18",
+        "total_cost": 2800.00
+    },
+    {
+        "title": "New York City Hustle",
+        "description": "The city that never sleeps — catch a Broadway show, stroll Central Park, and eat your way through Manhattan.",
+        "img_url": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800",
+        "num_days": 5,
+        "start_date": "2024-11-20",
+        "end_date": "2024-11-24",
+        "total_cost": 2100.00
+    },
+    {
+        "title": "Patagonia Trek",
+        "description": "Hike through some of the world's most dramatic landscapes at the southern tip of South America.",
+        "img_url": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800",
+        "num_days": 12,
+        "start_date": "2025-01-10",
+        "end_date": "2025-01-21",
+        "total_cost": 5600.00
+    }
+]
