@@ -5,3 +5,7 @@
 ## Lab 6 
 ![Lab 6 Demo](lab6.gif)
 ![pt2](lab6pt2.gif)
+
+## MileStone 3
+
+![milestone3 Demo](Milestone3.gif)
