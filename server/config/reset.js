@@ -122,9 +122,10 @@ const createUsersTable = async () => {
 
         CREATE TABLE IF NOT EXISTS users (
             id serial PRIMARY KEY,
-            username varchar(100) NOT NULL,
-            email varchar(255) NOT NULL UNIQUE,
-            password varchar(255) NOT NULL
+            githubid int NOT NULL,
+            username varchar(200) NOT NULL,
+            avatarurl varchar(500),
+            accesstoken varchar(500) NOT NULL
         );
     `
     try {
@@ -140,9 +141,9 @@ const createTripsUsersTable = async () => {
         DROP TABLE IF EXISTS trips_users;
 
         CREATE TABLE IF NOT EXISTS trips_users (
-            trip_id integer REFERENCES trips(id),
-            user_id integer REFERENCES users(id),
-            PRIMARY KEY (trip_id, user_id)
+            id serial PRIMARY KEY,
+            trip_id integer NOT NULL REFERENCES trips(id),
+            username text NOT NULL
         );
     `
     try {

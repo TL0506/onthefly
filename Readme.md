@@ -9,3 +9,6 @@
 ## MileStone 3
 
 ![milestone3 Demo](Milestone3.gif)
+
+## Lab 8
+![Lab 8 Demo](lab8.gif)

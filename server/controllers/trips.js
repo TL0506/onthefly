@@ -2,13 +2,21 @@ import { pool } from '../config/database.js'
 
 const createTrip = async (req, res) => {
     try {
-        const { title, description, img_url, num_days, start_date, end_date, total_cost } = req.body
+        const { title, description, img_url, num_days, start_date, end_date, total_cost, username } = req.body
         const results = await pool.query(
             'INSERT INTO trips (title, description, img_url, num_days, start_date, end_date, total_cost) \
             VALUES($1, $2, $3, $4, $5, $6, $7) \
             RETURNING *',
             [title, description, img_url, num_days, start_date, end_date, total_cost]
         )
+
+        await pool.query(
+            'INSERT INTO trips_users (trip_id, username) \
+            VALUES($1, $2) \
+            RETURNING *',
+            [results.rows[0].id, username]
+        )
+
         res.status(201).json(results.rows[0])
     } catch (error) {
         res.status(409).json({ error: error.message })
@@ -56,6 +64,14 @@ const deleteTrip = async (req, res) => {
         const id = parseInt(req.params.id)
         const activity_deletion = await pool.query(
             'DELETE FROM activities WHERE trip_id = $1',
+            [id]
+        )
+        const user_removal = await pool.query(
+            'DELETE FROM trips_users WHERE trip_id = $1',
+            [id]
+        )
+        const destination_removal = await pool.query(
+            'DELETE FROM trips_destinations WHERE trip_id = $1',
             [id]
         )
         const results = await pool.query(

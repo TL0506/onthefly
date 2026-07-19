@@ -1,0 +1,9 @@
+.Avatar {
+    display: inline;
+}
+
+.user-img {
+    height: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
