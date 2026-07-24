@@ -13,7 +13,7 @@ import Login from './pages/Login';
 import AddUserToTrip from './pages/AddUserToTrip';
 import Avatar from './components/Avatar';
 
-const API_URL = 'http://localhost:3001'
+const API_URL = import.meta.env.PROD ? 'https://server-3aww.onrender.com' : ''
 
 const App = () => {
 
