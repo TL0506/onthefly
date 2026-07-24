@@ -38,8 +38,8 @@ router.get(
 router.get(
     '/github/callback',
     passport.authenticate('github', {
-        successRedirect: 'http://localhost:5173/',
-        failureRedirect: 'http://localhost:5173/login-failed'
+        successRedirect: 'https://client-m5na.onrender.com/',
+        failureRedirect: 'https://client-m5na.onrender.com/destinations'
     })
 )
 
