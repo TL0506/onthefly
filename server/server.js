@@ -12,12 +12,17 @@ import { GitHub } from './config/auth.js'
 
 const app = express()
 
+app.set('trust proxy', 1)
+
 app.use(express.json())
 
 app.use(session({
     secret: process.env.SESSION_SECRET || 'codepath',
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: true,
+    cookie: process.env.NODE_ENV === 'production'
+        ? { secure: true, sameSite: 'none' }
+        : {}
 }))
 
 app.use(cors({
