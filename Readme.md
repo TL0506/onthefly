@@ -12,3 +12,6 @@
 
 ## Lab 8
 ![Lab 8 Demo](lab8.gif)
+
+# Lab 9
+![Lab 9 Demo](lab9.gif)
